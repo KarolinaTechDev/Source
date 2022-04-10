@@ -1,0 +1,325 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+  /* Clear fix hack */
+  .clearfix:after {
+       content: ".";
+       clear: both;
+       visibility: hidden;
+       line-height: 0;
+       height: 0;
+}
+  
+  .clear {
+      clear: both;
+}
+  
+  /******************************************
+  /* BASE STYLES
+  /*******************************************/
+  
+body{
+    width: vw;
+    height: vh; 
+    font-family: 'Lato', sans-serif;
+    background: rgb(242, 246, 249);
+    color: rgb(45, 68, 86);
+}
+
+.container{
+      overflow: hidden;
+}
+
+p{
+    font-size: 0.9em;
+}
+
+/* for Hamburger Menu */
+
+label {
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 30px;
+}
+
+ #toggle {
+    display: none;
+    float: left;
+} 
+
+/* Header */
+
+ul, li, a{
+    list-style: none;
+    text-decoration: none;
+    font-size: 0.9rem ;
+    color: rgb(110, 126, 140);
+}
+
+.home{
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 0px;
+}
+
+
+ul li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5%;
+}
+
+button{
+    width: 80px;
+    height: 30px;
+    background-color: rgb(47, 70, 88);
+    border: none;
+    color: white;
+}  
+
+
+
+ 
+/* Main Section */
+
+
+#tagline{
+    width: 40%;
+    float: left;
+    height: 522px;
+    margin-top: 74px;
+    padding-left: 10%;
+    
+}
+form input{
+    border-style: none;
+    height: 2.3em;
+    background-color: rgb(225, 233, 240);
+    margin-right: -37px;
+    width: 20em;
+}
+
+
+#tagline h2{
+    font-size: 2.5rem;
+    padding-right: 9%;
+    padding-bottom: 0.5em;
+}
+
+#tagline p{
+    margin-top: 20px;
+    padding-right: 3em;
+}
+
+
+#rightside{
+    width: 60%;
+    float: left;
+    height: 500px;
+}
+
+#rightside img{
+    width: 95%;
+    
+    display: inline-block;
+}
+
+
+
+/* aside */
+
+.asidebar{
+
+    display: inline-block;
+    padding-left: 10%;
+    margin-top: 14%;
+    margin-top: -10px;
+}
+
+.feature img{
+    width: 50px;
+    display: block;
+}
+
+.feature{
+    width: 22%;
+    height: 200px;
+    float: left;
+    display: block;
+    padding-right: 10%;
+}
+
+.feature h3{
+    font-size: 13px;
+    width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.feature p{
+    font-size: 12px;
+    width: 200px;
+    line-height: 1.6em;
+    padding-bottom: 10px;
+
+}
+
+.feature a{
+    /* width: 300px; */
+    font-weight: bold;
+    color: rgb(47, 70, 88);
+    margin-bottom: 30px;
+}
+
+
+
+
+/* bottom section */
+.bottom{
+    height: 300px;
+    background: rgb(255, 255, 255);
+    margin-top: 0;
+    padding-left: 10%;
+}
+
+
+
+.bottom h3{
+    font-size: 42px;
+    width: 100%;
+    padding-right: 590px;  
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.bottom p{
+    padding-right: 552px;
+    line-height: 1.6em;
+    font-size: 15px;
+}
+
+.justcolor{
+    width: 90%;
+    height: 90px;
+    padding-left: 10%;
+    margin-top: 3%;
+    background: rgb(242, 246, 249);
+}
+
+
+  
+  /******************************************
+  /* ADDITIONAL STYLES
+  /*.******************************************/
+  
+  @media (min-width: 601px) and (max-width: 900px){
+    header{
+        flex-direction: column;
+        height: 100px;
+
+    }
+
+	#tagline{
+		width: 100%;
+        height: 200px;
+
+	}
+    .button_1{
+        width: 100%;
+        display: block;
+        text-align: center;
+
+
+    }
+    #rightside{
+        width: 100%;
+        padding-top: 20px;
+        display: block;
+    }
+} 
+
+@media (max-width: 600px){
+    header{
+        flex-direction: column;
+        height: 10px;
+
+    }
+
+    .home{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgb(225, 233, 240); 
+    }
+
+    label {
+        display: inline-block;
+        cursor: pointer;
+        left: 0;
+        top: 0;
+        position: absolute;
+
+    }
+
+    header .navbar1, .button_1{
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    
+
+    /* .nav_links .button_1{
+        display: none;
+    } */
+
+    #tagline{
+        width: 100%;
+        height: 300px;
+        clear: both;
+        display: block;
+        padding-left: 5px;
+    }
+
+    form input{
+        width: 100%;
+        display: block;
+        margin-right: 5px;
+        align-items: center;
+    }
+
+    .button_2{
+        display: block;
+        width: 100%;
+    }
+
+    #rightside{
+        width: 100%;
+        padding-top: 20px;
+        display: block;
+        float: right;
+    }
+
+
+    #tinywrappers{
+        display: none;
+    }
+
+    .bottom{
+        display: none;
+    }
+}
